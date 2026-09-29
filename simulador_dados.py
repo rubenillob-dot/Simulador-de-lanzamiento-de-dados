@@ -16,3 +16,12 @@ Módulo: Programación en Python (Optativo) — CFGS Desarrollo de Aplicaciones 
 import time
 import random
 
+# CONSTANTES: Tipos de dados permitidos (número de caras)
+D4 = 4
+D6 = 6
+D8 = 8
+D10 = 10
+D12 = 12
+D20 = 20
+
+
