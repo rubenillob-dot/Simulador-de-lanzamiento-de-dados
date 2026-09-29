@@ -1,0 +1,21 @@
+# Byte-compiled / optimizados de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Archivos temporales y de registro
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+.DS_Store
+Thumbs.db
+
+# Configuración del entorno de Visual Studio Code
+.vscode/
+
+# Distribución y compilación
+build/
+dist/
+*.egg-info/
