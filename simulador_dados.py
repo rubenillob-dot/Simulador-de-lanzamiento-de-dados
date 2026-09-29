@@ -41,7 +41,13 @@ while ejecutando:
         continue
 
     if opcion == 1:
-        print("Lanzando dados...")
+        print("\n--- TIPOS DE DADOS DISPONIBLES ---")
+        print("1. D4  (4 caras)")
+        print("2. D6  (6 caras)")
+        print("3. D8  (8 caras)")
+        print("4. D10 (10 caras)")
+        print("5. D12 (12 caras)")
+        print("6. D20 (20 caras)")
     elif opcion == 2:
         print("\n[!] La opción 'Estadísticas' estará disponible mas tarde.")
         pass
