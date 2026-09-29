@@ -33,8 +33,12 @@ while ejecutando:
     print("2. Estadísticas ")
     print("3. Salir")
 
-    opcion = input("Elige una opción: ")
-    opcion = int(opcion)
+    try:
+        opcion = input("Elige una opción: ")
+        opcion = int(opcion)
+    except ValueError:
+        print("Por favor, introduce un número válido.")
+        continue
 
     if opcion == 1:
         print("Lanzando dados...")
