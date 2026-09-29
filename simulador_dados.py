@@ -92,6 +92,7 @@ while ejecutando:
         caras_elegidas = caras_dado
         suma_total = 0
         contador_dados = 0
+        tiros_realizados = 0
 
        
         print("\n--- RESULTADOS DE LA TIRADA ---")
@@ -99,6 +100,7 @@ while ejecutando:
             tirada = random.randint(1, caras_elegidas)
             suma_total += tirada
             contador_dados += 1
+            tiros_realizados = tiros_realizados + 1
             print(f"Dado {i + 1}: {tirada}")
 
         # Cálculo del promedio: el operador '/' realiza una división real y produce
