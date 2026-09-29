@@ -97,7 +97,8 @@ while ejecutando:
         print("\n--- RESULTADOS DE LA TIRADA ---")
         for i in range(cantidad_dados):
             tirada = random.randint(1, caras_elegidas)
-            suma_total += tirada
+            # ERROR HUMANO ACCIDENTAL: Indentación excesiva (provoca IndentationError: unexpected indent)
+                suma_total += tirada
             contador_dados += 1
             print(f"Dado {i + 1}: {tirada}")
 
