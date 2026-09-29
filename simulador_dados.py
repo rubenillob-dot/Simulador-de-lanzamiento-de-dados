@@ -30,8 +30,21 @@ ejecutando = True
 while ejecutando:
     print("    BIENVENIDO AL SIMULADOR DE DADOS    ")
     print("1. Lanzar dados")
-    print("2. Estadísticas (próximamente)")
+    print("2. Estadísticas ")
     print("3. Salir")
+
+    opcion = input("Elige una opción: ")
+
+    if opcion == 1:
+        print("Lanzando dados...")
+    elif opcion == 2:
+        pass
+    elif opcion == 3:
+        print("¡Hasta pronto!")
+        ejecutando = False
+    else:
+        print("Opción incorrecta.")
+
 
     
 
