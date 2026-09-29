@@ -100,7 +100,8 @@ while ejecutando:
             contador_dados += 1
             print(f"Dado {i + 1}: {tirada}")
 
-        # Cálculo del promedio al finalizar todas las tiradas
+        # Cálculo del promedio: el operador '/' realiza una división real y produce
+        # una conversión implícita de tipo entero (int) a flotante (float).
         promedio = suma_total / cantidad_dados
     elif opcion == 2:
         print("\n[!] La opción 'Estadísticas' estará disponible mas tarde.")
