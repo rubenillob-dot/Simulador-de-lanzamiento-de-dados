@@ -78,6 +78,8 @@ while ejecutando:
         else:
             print("Tipo de dado no válido.")
             continue
+
+        cantidad_input = input("\n¿Cuántos dados deseas lanzar?: ")
     elif opcion == 2:
         print("\n[!] La opción 'Estadísticas' estará disponible mas tarde.")
         pass
