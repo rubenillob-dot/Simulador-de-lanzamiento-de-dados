@@ -89,9 +89,14 @@ while ejecutando:
             except ValueError:
                 print("Error: Debes introducir un número entero válido.")
 
-        # Variables acumuladoras para los resultados de la tirada
+        caras_elegidas = caras_dado
         suma_total = 0
         contador_dados = 0
+
+        # Bucle para realizar las tiradas
+        for i in range(cantidad_dados):
+            tirada = random.randint(1, caras_elegidas)
+            print(f"Dado {i + 1}: {tirada}")
     elif opcion == 2:
         print("\n[!] La opción 'Estadísticas' estará disponible mas tarde.")
         pass
