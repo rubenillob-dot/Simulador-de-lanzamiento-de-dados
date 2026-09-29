@@ -79,7 +79,16 @@ while ejecutando:
             print("Tipo de dado no válido.")
             continue
 
-        cantidad_input = input("\n¿Cuántos dados deseas lanzar?: ")
+        
+        while True:
+            try:
+                cantidad_dados = int(input("\n¿Cuántos dados deseas lanzar?: "))
+                if cantidad_dados > 0:
+                    break
+                else:
+                    print("Error: La cantidad de dados debe ser mayor que 0.")
+            except ValueError:
+                print("Error: Debes introducir un número entero válido.")
     elif opcion == 2:
         print("\n[!] La opción 'Estadísticas' estará disponible mas tarde.")
         pass
