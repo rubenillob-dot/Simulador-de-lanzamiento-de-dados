@@ -29,6 +29,10 @@ ejecutando = True
 
 while ejecutando:
     print("    BIENVENIDO AL SIMULADOR DE DADOS    ")
+    print("1. Lanzar dados")
+    print("2. Estadísticas (próximamente)")
+    print("3. Salir")
+
     
 
 
