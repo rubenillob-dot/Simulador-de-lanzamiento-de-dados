@@ -98,9 +98,10 @@ while ejecutando:
             tirada = random.randint(1, caras_elegidas)
             suma_total += tirada
             contador_dados += 1
-            # Error redundante: cálculo del promedio en cada iteración
-            promedio = suma_total / cantidad_dados
             print(f"Dado {i + 1}: {tirada}")
+
+        # Cálculo del promedio al finalizar todas las tiradas
+        promedio = suma_total / cantidad_dados
     elif opcion == 2:
         print("\n[!] La opción 'Estadísticas' estará disponible mas tarde.")
         pass
