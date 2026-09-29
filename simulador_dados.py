@@ -79,14 +79,13 @@ while ejecutando:
             print("Tipo de dado no válido.")
             continue
 
-        
         while True:
             try:
                 cantidad_dados = int(input("\n¿Cuántos dados deseas lanzar?: "))
-                if cantidad_dados > 0:
-                    break
+                if cantidad_dados <= 0:
+                    print("Advertencia: La cantidad debe ser mayor que 0 (no se admiten números negativos ni cero).")
                 else:
-                    print("Error: La cantidad de dados debe ser mayor que 0.")
+                    break
             except ValueError:
                 print("Error: Debes introducir un número entero válido.")
     elif opcion == 2:
