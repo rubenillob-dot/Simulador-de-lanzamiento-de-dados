@@ -88,6 +88,10 @@ while ejecutando:
                     break
             except ValueError:
                 print("Error: Debes introducir un número entero válido.")
+
+        # Variables acumuladoras para los resultados de la tirada
+        suma_total = 0
+        contador_dados = 0
     elif opcion == 2:
         print("\n[!] La opción 'Estadísticas' estará disponible mas tarde.")
         pass
