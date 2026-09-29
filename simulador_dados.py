@@ -43,11 +43,11 @@ while ejecutando:
     if opcion == 1:
         print("Lanzando dados...")
     elif opcion == 2:
-        # Requisito académico: uso de 'pass' como marcador de futura ampliación
-        print("\n[!] La opción 'Estadísticas' estará disponible en una próxima versión.")
+        print("\n[!] La opción 'Estadísticas' estará disponible mas tarde.")
         pass
     elif opcion == 3:
-        print("¡Hasta pronto!")
+        print(" ¡Gracias por usar el Simulador de Dados! ")
+        print("          ¡Hasta la próxima!            ")
         ejecutando = False
     else:
         print("Opción incorrecta.")
