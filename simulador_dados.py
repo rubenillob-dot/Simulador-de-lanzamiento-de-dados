@@ -9,6 +9,10 @@ Permite seleccionar el tipo y la cantidad de dados, mostrando una animación de 
 los resultados individuales coloreados (críticos, pifias y valores intermedios)
 mediante la librería rich, así como el cálculo de la suma acumulada y el promedio.
 
-Autor: Alumno DAM
+Autor: Alumno Ruben Barrado Pastor DAM
 Módulo: Programación en Python (Optativo) — CFGS Desarrollo de Aplicaciones Multiplataforma (DAM)
 """
+
+import time
+import random
+
