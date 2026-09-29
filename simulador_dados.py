@@ -17,12 +17,13 @@ import time
 import random
 
 # CONSTANTES: Tipos de dados permitidos (número de caras)
-D4 = 4
-D6 = 6
-D8 = 8
-D10 = 10
-D12 = 12
-D20 = 20
+CARAS_D4 = 4
+CARAS_D6 = 6
+CARAS_D8 = 8
+CARAS_D10 = 10
+CARAS_D12 = 12
+CARAS_D20 = 20
+
 
 # BUCLE PRINCIPAL DEL PROGRAMA
 ejecutando = True
@@ -50,6 +51,32 @@ while ejecutando:
         print("6. D20 (20 caras)")
 
         caras_input = input("\nIntroduce el número de caras del dado (4, 6, 8, 10, 12, 20): ")
+
+        try:
+            caras = int(caras_input)
+        except ValueError:
+            caras = 0
+
+        if caras == CARAS_D4:
+            caras_dado = CARAS_D4
+            print(f"Has seleccionado: D4 ({CARAS_D4} caras).")
+        elif caras == CARAS_D6:
+            caras_dado = CARAS_D6
+            print(f"Has seleccionado: D6 ({CARAS_D6} caras).")
+        elif caras == CARAS_D8:
+            caras_dado = CARAS_D8
+            print(f"Has seleccionado: D8 ({CARAS_D8} caras).")
+        elif caras == CARAS_D10:
+            caras_dado = CARAS_D10
+            print(f"Has seleccionado: D10 ({CARAS_D10} caras).")
+        elif caras == CARAS_D12:
+            caras_dado = CARAS_D12
+            print(f"Has seleccionado: D12 ({CARAS_D12} caras).")
+        elif caras == CARAS_D20:
+            caras_dado = CARAS_D20
+            print(f"Has seleccionado: D20 ({CARAS_D20} caras).")
+        else:
+            print("Error: Tipo de dado no válido. Debe ser 4, 6, 8, 10, 12 o 20.")
     elif opcion == 2:
         print("\n[!] La opción 'Estadísticas' estará disponible mas tarde.")
         pass
