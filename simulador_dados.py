@@ -43,6 +43,8 @@ while ejecutando:
     if opcion == 1:
         print("Lanzando dados...")
     elif opcion == 2:
+        # Requisito académico: uso de 'pass' como marcador de futura ampliación
+        print("\n[!] La opción 'Estadísticas' estará disponible en una próxima versión.")
         pass
     elif opcion == 3:
         print("¡Hasta pronto!")
