@@ -75,8 +75,6 @@ while ejecutando:
         elif caras == CARAS_D20:
             caras_dado = CARAS_D20
             print(f"Has seleccionado: D20 ({CARAS_D20} caras).")
-        else:
-            print("Error: Tipo de dado no válido. Debe ser 4, 6, 8, 10, 12 o 20.")
     elif opcion == 2:
         print("\n[!] La opción 'Estadísticas' estará disponible mas tarde.")
         pass
