@@ -19,3 +19,10 @@ Thumbs.db
 build/
 dist/
 *.egg-info/
+
+# Entornos virtuales
+.venv/
+venv/
+env/
+ENV/
+
