@@ -48,6 +48,8 @@ while ejecutando:
         print("4. D10 (10 caras)")
         print("5. D12 (12 caras)")
         print("6. D20 (20 caras)")
+
+        caras_input = input("\nIntroduce el número de caras del dado (4, 6, 8, 10, 12, 20): ")
     elif opcion == 2:
         print("\n[!] La opción 'Estadísticas' estará disponible mas tarde.")
         pass
