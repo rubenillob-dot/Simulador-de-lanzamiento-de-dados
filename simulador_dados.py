@@ -24,4 +24,11 @@ D10 = 10
 D12 = 12
 D20 = 20
 
+# BUCLE PRINCIPAL DEL PROGRAMA
+ejecutando = True
+
+while ejecutando:
+    print("    BIENVENIDO AL SIMULADOR DE DADOS    ")
+    
+
 
