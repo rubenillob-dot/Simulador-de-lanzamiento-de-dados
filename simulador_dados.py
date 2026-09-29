@@ -34,6 +34,7 @@ while ejecutando:
     print("3. Salir")
 
     opcion = input("Elige una opción: ")
+    opcion = int(opcion)
 
     if opcion == 1:
         print("Lanzando dados...")
