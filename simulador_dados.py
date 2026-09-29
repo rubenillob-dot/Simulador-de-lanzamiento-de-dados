@@ -94,6 +94,7 @@ while ejecutando:
         contador_dados = 0
 
        
+        print("\n--- RESULTADOS DE LA TIRADA ---")
         for i in range(cantidad_dados):
             tirada = random.randint(1, caras_elegidas)
             suma_total += tirada
@@ -103,6 +104,9 @@ while ejecutando:
         # Cálculo del promedio: el operador '/' realiza una división real y produce
         # una conversión implícita de tipo entero (int) a flotante (float).
         promedio = suma_total / cantidad_dados
+
+        print(f"\nTotal acumulado: {suma_total}")
+        print(f"Promedio: {promedio:.2f}")
     elif opcion == 2:
         print("\n[!] La opción 'Estadísticas' estará disponible mas tarde.")
         pass
