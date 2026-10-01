@@ -18,6 +18,9 @@ import random
 from rich.console import Console
 from rich.panel import Panel
 
+# Inicialización de consola
+consola = Console()
+
 # CONSTANTES: Tipos de dados permitidos (número de caras)
 CARAS_D4 = 4
 CARAS_D6 = 6
