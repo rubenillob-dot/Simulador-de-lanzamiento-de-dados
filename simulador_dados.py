@@ -34,7 +34,7 @@ CARAS_D20 = 20
 ejecutando = True
 
 while ejecutando:
-    print("    BIENVENIDO AL SIMULADOR DE DADOS    ")
+    consola.print(Panel.fit("[bold cyan]BIENVENIDO AL SIMULADOR DE DADOS[/bold cyan]", border_style="cyan"))
     print("1. Lanzar dados")
     print("2. Estadísticas ")
     print("3. Salir")
