@@ -100,7 +100,16 @@ while ejecutando:
         contador_dados = 0
         tiros_realizados = 0
 
-       
+        # Animación de lanzamiento previa al resultado final
+        with Live(console=consola, refresh_per_second=15) as live:
+            for _ in range(8):
+                animacion_texto = ""
+                for j in range(cantidad_dados):
+                    valor_simulado = random.randint(1, caras_elegidas)
+                    animacion_texto += f"Dado {j + 1}: {valor_simulado}\n"
+                live.update(Panel.fit(animacion_texto.strip(), title="Lanzando dados...", border_style="yellow"), refresh=True)
+                time.sleep(0.08)
+
         print("\n--- RESULTADOS DE LA TIRADA ---")
         for i in range(cantidad_dados):
             tirada = random.randint(1, caras_elegidas)
