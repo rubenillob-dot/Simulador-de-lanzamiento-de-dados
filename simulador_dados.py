@@ -16,7 +16,7 @@ Módulo: Programación en Python (Optativo) — CFGS Desarrollo de Aplicaciones 
 import time
 import random
 from rich.console import Console
-from rich.panel import Panel
+from rich.panel import Paneles
 
 # Inicialización de consola
 consola = Console()
