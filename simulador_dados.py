@@ -111,7 +111,6 @@ while ejecutando:
                 live.update(Panel.fit(animacion_texto.strip(), border_style="yellow"), refresh=True)
                 time.sleep(0.05)
 
-        print("\n--- RESULTADOS DE LA TIRADA ---")
         for i in range(cantidad_dados):
             tirada = random.randint(1, caras_elegidas)
             resultado = tirada
@@ -127,14 +126,17 @@ while ejecutando:
                 color = "yellow"
 
             cadena_dados += f"[{color}]{resultado}[/{color}] "
-            print(f"Dado {i + 1}: {tirada}")
 
         # Cálculo del promedio: el operador '/' realiza una división real y produce
         # una conversión implícita de tipo entero (int) a flotante (float).
         promedio = suma_total / cantidad_dados
 
-        print(f"\nTotal acumulado: {suma_total}")
-        print(f"Promedio: {promedio:.2f}")
+        resumen_tirada = (
+            f"Tiradas individuales: {cadena_dados.strip()}\n"
+            f"Total acumulado: {suma_total}\n"
+            f"Promedio: {promedio:.2f}"
+        )
+        consola.print(Panel.fit(resumen_tirada, title="Resultados de la Tirada", border_style="cyan"))
     elif opcion == 2:
         print("\n[!] La opción 'Estadísticas' estará disponible mas tarde.")
         pass
