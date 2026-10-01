@@ -99,6 +99,7 @@ while ejecutando:
         suma_total = 0
         contador_dados = 0
         tiros_realizados = 0
+        cadena_dados = ""
 
         # Animación de lanzamiento previa al resultado final
         with Live(console=consola, refresh_per_second=10) as live:
@@ -113,17 +114,19 @@ while ejecutando:
         print("\n--- RESULTADOS DE LA TIRADA ---")
         for i in range(cantidad_dados):
             tirada = random.randint(1, caras_elegidas)
+            resultado = tirada
             suma_total += tirada
             contador_dados += 1
             tiros_realizados = tiros_realizados + 1
 
-            if tirada == 1:
+            if resultado == 1:
                 color = "red"
-            elif tirada == caras_elegidas:
+            elif resultado == caras_elegidas:
                 color = "green"
             else:
                 color = "yellow"
 
+            cadena_dados += f"[{color}]{resultado}[/{color}] "
             print(f"Dado {i + 1}: {tirada}")
 
         # Cálculo del promedio: el operador '/' realiza una división real y produce
