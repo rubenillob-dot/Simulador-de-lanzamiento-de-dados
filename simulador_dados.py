@@ -116,6 +116,10 @@ while ejecutando:
             suma_total += tirada
             contador_dados += 1
             tiros_realizados = tiros_realizados + 1
+
+            if tirada == 1:
+                color = "red"
+
             print(f"Dado {i + 1}: {tirada}")
 
         # Cálculo del promedio: el operador '/' realiza una división real y produce
