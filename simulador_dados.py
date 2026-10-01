@@ -19,10 +19,10 @@ from rich.console import Console
 from rich.panel import Panel
 from rich.live import Live
 
-# Inicialización de consola
+# Inicialización de la consola de Rich para salidas enriquecidas
 consola = Console()
 
-# CONSTANTES: Tipos de dados permitidos (número de caras)
+# Constantes: tipos de dados admitidos según su número de caras
 CARAS_D4 = 4
 CARAS_D6 = 6
 CARAS_D8 = 8
@@ -31,7 +31,7 @@ CARAS_D12 = 12
 CARAS_D20 = 20
 
 
-# BUCLE PRINCIPAL DEL PROGRAMA
+# Bucle principal de ejecución del simulador
 ejecutando = True
 
 while ejecutando:
@@ -40,6 +40,7 @@ while ejecutando:
     print("2. Estadísticas ")
     print("3. Salir")
 
+    # Control de excepciones para la opción del menú principal
     try:
         opcion = input("Elige una opción: ")
         opcion = int(opcion)
@@ -58,6 +59,7 @@ while ejecutando:
 
         caras_input = input("\nIntroduce el número de caras del dado (4, 6, 8, 10, 12, 20): ")
 
+        # Validación y asignación del tipo de dado según sus caras
         try:
             caras = int(caras_input)
         except ValueError:
@@ -85,6 +87,7 @@ while ejecutando:
             print("Tipo de dado no válido.")
             continue
 
+        # Validación de la cantidad de dados (entero positivo mayor a cero)
         while True:
             try:
                 cantidad_dados = int(input("\n¿Cuántos dados deseas lanzar?: "))
@@ -95,13 +98,14 @@ while ejecutando:
             except ValueError:
                 print("Error: Debes introducir un número entero válido.")
 
+        # Variables acumuladoras y de estado para la tirada
         caras_elegidas = caras_dado
         suma_total = 0
         contador_dados = 0
         tiros_realizados = 0
         cadena_dados = ""
 
-        # Animación de lanzamiento previa al resultado final
+        # Animación previa del lanzamiento con Rich Live y pausas cortas
         with Live(console=consola, refresh_per_second=10) as live:
             for _ in range(8):
                 animacion_texto = "Rodando dados...\n"
@@ -111,6 +115,7 @@ while ejecutando:
                 live.update(Panel.fit(animacion_texto.strip(), border_style="yellow"), refresh=True)
                 time.sleep(0.05)
 
+        # Bucle de tiradas definitivas: asignación de color y concatenación sin listas
         for i in range(cantidad_dados):
             tirada = random.randint(1, caras_elegidas)
             resultado = tirada
@@ -127,27 +132,26 @@ while ejecutando:
 
             cadena_dados += f"[{color}]{resultado}[/{color}] "
 
-        # Cálculo del promedio: el operador '/' realiza una división real y produce
-        # una conversión implícita de tipo entero (int) a flotante (float).
+        # Cálculo del promedio: división real con conversión implícita de int a float
         promedio = suma_total / cantidad_dados
 
+        # Resumen final encapsulado en un panel estilizado
         resumen_tirada = (
             f"Tiradas individuales: {cadena_dados.strip()}\n"
             f"Total acumulado: {suma_total}\n"
             f"Promedio: {promedio:.2f}"
         )
         consola.print(Panel.fit(resumen_tirada, title="Resultados de la Tirada", border_style="cyan"))
+
     elif opcion == 2:
-        print("\n[!] La opción 'Estadísticas' estará disponible mas tarde.")
+        # Marcador de funcionalidad futura mediante sentencia pass
+        print("\n[!] La opción 'Estadísticas' estará disponible más tarde.")
         pass
+
     elif opcion == 3:
         print(" ¡Gracias por usar el Simulador de Dados! ")
         print("          ¡Hasta la próxima!            ")
         ejecutando = False
+
     else:
         print("Opción incorrecta.")
-
-
-    
-
-
