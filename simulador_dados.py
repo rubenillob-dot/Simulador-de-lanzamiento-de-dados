@@ -31,6 +31,11 @@ CARAS_D12 = 12
 CARAS_D20 = 20
 
 
+# Acumuladores globales para las estadísticas de la sesión
+total_lanzamientos = 0
+total_dados_lanzados = 0
+suma_historica = 0
+
 # Bucle principal de ejecución del simulador
 ejecutando = True
 
@@ -143,9 +148,35 @@ while ejecutando:
         )
         consola.print(Panel.fit(resumen_tirada, title="Resultados de la Tirada", border_style="cyan"))
 
+        # Actualización de acumuladores globales para estadísticas de la sesión
+        total_lanzamientos += 1
+        total_dados_lanzados += cantidad_dados
+        suma_historica += suma_total
+
     elif opcion == 2:
-        # Marcador de funcionalidad futura mediante sentencia pass
-        print("\n[!] La opción 'Estadísticas' estará disponible más tarde.")
+        # Estadísticas acumuladas de la sesión
+        if total_lanzamientos == 0:
+            consola.print(Panel.fit(
+                "[yellow]Aún no se han realizado lanzamientos en esta sesión.[/yellow]",
+                title="Estadísticas",
+                border_style="yellow"
+            ))
+        else:
+            promedio_global = suma_historica / total_dados_lanzados
+            texto_stats = (
+                f"Lanzamientos realizados: {total_lanzamientos}\n"
+                f"Total de dados tirados: {total_dados_lanzados}\n"
+                f"Suma acumulada histórica: {suma_historica}\n"
+                f"Promedio global: {promedio_global:.2f}\n\n"
+                f"[dim]Pendiente de desarrollo: desglose por tipo de dado[/dim]"
+            )
+            consola.print(Panel.fit(
+                texto_stats,
+                title="Estadísticas de la Sesión",
+                border_style="magenta"
+            ))
+
+        # Marcador de funcionalidad futura según Requisito 7
         pass
 
     elif opcion == 3:
