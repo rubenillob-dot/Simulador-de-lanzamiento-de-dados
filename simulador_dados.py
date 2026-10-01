@@ -119,6 +119,8 @@ while ejecutando:
 
             if tirada == 1:
                 color = "red"
+            elif tirada == caras_elegidas:
+                color = "green"
 
             print(f"Dado {i + 1}: {tirada}")
 
