@@ -108,7 +108,7 @@ while ejecutando:
                     valor_simulado = random.randint(1, caras_elegidas)
                     animacion_texto += f"Dado {j + 1}: {valor_simulado}\n"
                 live.update(Panel.fit(animacion_texto.strip(), border_style="yellow"), refresh=True)
-                time.sleep(0.08)
+                time.sleep(0.05)
 
         print("\n--- RESULTADOS DE LA TIRADA ---")
         for i in range(cantidad_dados):
