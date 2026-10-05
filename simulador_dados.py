@@ -168,7 +168,7 @@ while ejecutando:
                 f"Total de dados tirados: {total_dados_lanzados}\n"
                 f"Suma acumulada histórica: {suma_historica}\n"
                 f"Promedio global: {promedio_global:.2f}\n\n"
-                f"[dim]Pendiente de desarrollo: desglose por tipo de dado[/dim]"
+                
             )
             consola.print(Panel.fit(
                 texto_stats,
@@ -176,7 +176,6 @@ while ejecutando:
                 border_style="magenta"
             ))
 
-        # Marcador de funcionalidad futura según Requisito 7
         pass
 
     elif opcion == 3:
